@@ -1,25 +1,19 @@
+/* eslint-disable */
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // class가 아닌 className 사용
+    <div className='App'>
+      {/* 최상단 묶음(div) */}
+      <div className='container alert alert-success'>
+        <h1>hello</h1>
+        <p style={{color:"gold", fontWeight:"bolder", fontSize:"40px"}}>내용</p>
+      </div>
     </div>
   );
 }
 
+// #1. 컴포넌트 내보내기 (export)
 export default App;

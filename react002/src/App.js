@@ -131,8 +131,8 @@ function App() {
               <thead className="table-dark">
                 <tr>
                   <th scope="col" style={{width:"10%"}}>NO</th>
-                  <th scope="col" style={{width:"20%"}}>TITLE & WRITE</th>
-                  <th scope="col" style={{width:"50%"}}>CONTENT</th>
+                  <th scope="col" style={{width:"40%"}}>TITLE</th>
+                  <th scope="col" style={{width:"30%"}}>WRITE</th>
                   <th scope="col" style={{width:"10%"}}>DATE</th>
                   <th scope="col" style={{width:"10%"}}>DEL</th>
                 </tr>
@@ -155,8 +155,8 @@ function App() {
                   list.map( (li, index)=>(
                   <tr key={index}>
                     <td>{li.no}</td>
-                    <td>{li.title} & {li.name}</td>
-                    <td>{li.content}</td>
+                    <td>{li.title}</td>
+                    <td>{li.name}</td>
                     <td>{li.date}</td>
                     {/* ※중요) 버튼 클릭 시 ()=>listDel()*/}
                     <td><button className='btn btn-danger' onClick={()=>listDel(li.no)}>삭제</button></td>

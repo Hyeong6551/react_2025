@@ -1,4 +1,5 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit'
+import LoginForm from '../components/LoginForm';
 
 // 저장할 변수 지정
 let user = createSlice({
@@ -16,6 +17,12 @@ let user = createSlice({
       let random = Math.floor(Math.random()*5) + 1
       state.profile = `/images/user${random}.png`
       return state
+    },
+    logout(){
+      return null
+    },
+    login(state,data){      // (1. 상태정보 2. 내가 넣은값)
+      return data.payload   // data를 액션객체에 담아서 같이 보내기
     }
   },
 })
@@ -26,4 +33,4 @@ export default configureStore({
   },
 })
 
-export let {imgChange} = user.actions
+export let {imgChange, logout, login} = user.actions
